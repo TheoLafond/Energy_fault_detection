@@ -34,6 +34,11 @@ class Dataset:
         # Implement code to get an item from the dataset given an index
         # Your code here
         return self.data[index,:], self.y[index,:]
+    
+    def to_tfdataset(self):
+        # Convert the numpy arrays to TensorFlow datasets
+        tf_data = tf.data.Dataset.from_tensor_slices((self.data, self.y))
+        return tf_data
 
 
 if __name__ == "__main__":
