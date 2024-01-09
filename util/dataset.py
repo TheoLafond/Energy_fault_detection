@@ -42,10 +42,6 @@ class Dataset:
 
 
 if __name__ == "__main__":
-    import matplotlib.pyplot as plt
     mydataset = Dataset()
-    plt.plot(mydataset[0][0])
-    plt.show()
-    print(mydataset[0][1])
-    print(len(mydataset))
+    
     
